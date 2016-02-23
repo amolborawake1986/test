@@ -1,0 +1,684 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: white;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px.listbox color: #696969;
+}
+
+a:link, a:visited
+{
+    color: #dde4ec;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 100%; /*960px;*/
+    height: auto;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+    margin-top: 0px;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #f6fbac;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #3a4f63;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    min-height: 420px;
+    height: auto;
+    width: 98%;
+    padding-top: 10px;
+    margin-left: 9px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer
+{
+    color: #dde4ec;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    background-color: #3a4f63;
+    height: 30px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 34%;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+.footerLink
+{
+    color: #dde4ec;
+    text-decoration: none;
+}
+
+.logoDiv
+{
+    display: inline;
+    width: auto;
+    height: auto;
+    float: left;
+}
+
+.SliderDiv
+{
+    display: inline-block;
+    background-color: aliceblue;
+    margin-right: 1%;
+    border-radius: 30px;
+    width: 48%;
+    min-height: 400px;
+    float: left;
+    min-width: 424px;
+}
+
+.loginMainDiv
+{
+    display: inline-block;
+    background-color: aliceblue;
+    border-radius: 30px;
+    width: 50%;
+    min-height: 400px;
+}
+
+.loginDiv
+{
+    margin-left: 71%;
+    font-size: large;
+}
+
+.EmpSubMenuDiv
+{
+    height: 27px;
+    padding-top: 6%;
+    padding-left: 5%;
+}
+
+.EmpContentDiv
+{
+    display: inline;
+    background-color: aliceblue;
+}
+
+.EmpMainDiv
+{
+    background-color: #3a4f63;
+    width: 18%;
+    font-weight: bold;
+    color: aliceblue;
+    float: left;
+}
+
+.EmpSubMenuDiv:hover
+{
+    background-color: teal;
+    padding-left: 5%;
+}
+
+.subHeader
+{
+    background-color: cadetblue;
+    height: 26px;
+    padding-top: 5px;
+    padding-left: 11px;
+    color: aqua;
+}
+
+.NameDiv
+{
+    padding-left: 5%;
+}
+
+.combobox
+{
+    width: 33%;
+}
+
+.lblWidth
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.MiddleContentDiv
+{
+    padding-top: 5px;
+    margin-left: 30%;
+}
+
+.Menu
+{
+    position: relative;
+    width: auto;
+    width: 98%;
+}
+
+
+
+.Menu ul li
+{
+    background-color: #3a4f63;
+    width: 98%;
+    float: right;
+    padding-top: 6%;
+    padding-left: 4%;
+    padding-right: 6%;
+    padding-bottom: 6%;
+}
+
+
+.Menu ul li:hover
+{
+    background-color: Highlight;
+}
+
+.EmpMasterConDiv
+{
+    padding-top: 1%;
+    width: 100%;
+}
+
+.listbox
+{
+    display: inline;
+    margin-left: 10px;
+    width: 22%;
+}
+
+
+
+/****************************************/
+
+
+.theme-default .nivoSlider
+{
+    position: relative;
+    background: url(loading.gif) no-repeat 50% 50%;
+    margin-bottom: 10px;
+}
+.theme-default .nivoSlider img
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.theme-default .nivoSlider a
+{
+    border: 0;
+    display: block;
+}
+
+.theme-default .nivo-controlNav
+{
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
+    z-index: 999;
+}
+.theme-default .nivo-controlNav a
+{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../bullets.png) no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active
+{
+    background-position: 0 -22px;
+}
+
+.theme-default .nivo-directionNav a
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(arrows.png) no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.theme-default:hover .nivo-directionNav a
+{
+    opacity: 1;
+}
+.theme-default a.nivo-nextNav
+{
+    background-position: -30px 0;
+    right: 15px;
+}
+.theme-default a.nivo-prevNav
+{
+    left: 15px;
+}
+
+.theme-default .nivo-caption
+{
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a
+{
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover
+{
+    color: #fff;
+}
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled
+{
+    width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a
+{
+    width: auto;
+    height: auto;
+    background: none;
+    margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img
+{
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
+
+
+.nivoSlider
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.nivoSlider img
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    max-width: none;
+}
+.nivo-main-image
+{
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 6;
+    display: none;
+    background: white;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice
+{
+    display: block;
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    top: 0;
+}
+.nivo-box
+{
+    display: block;
+    position: absolute;
+    z-index: 5;
+    overflow: hidden;
+}
+.nivo-box img
+{
+    display: block;
+}
+
+/* Caption styles */
+.nivo-caption
+{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    z-index: 8;
+    padding: 5px 10px;
+    opacity: 0.8;
+    overflow: hidden;
+    display: none;
+    -moz-opacity: 0.8;
+    filter: alpha(opacity=8);
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+.nivo-caption p
+{
+    padding: 5px;
+    margin: 0;
+}
+.nivo-caption a
+{
+    display: inline !important;
+}
+.nivo-html-caption
+{
+    display: none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a
+{
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    cursor: pointer;
+}
+.nivo-prevNav
+{
+    left: 0px;
+}
+.nivo-nextNav
+{
+    right: 0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav
+{
+    text-align: center;
+    padding: 15px 0;
+}
+.nivo-controlNav a
+{
+    cursor: pointer;
+}
+.nivo-controlNav a.active
+{
+    font-weight: bold;
+}
+.slider-wrapper
+{
+    position: relative;
+}
+
+
+
+
+/*******************************************************************/
+

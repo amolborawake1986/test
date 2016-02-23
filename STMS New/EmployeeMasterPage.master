@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="EmployeeMasterPage.master.cs"
+    Inherits="EmployeeMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
+    <script type="text/javascript">
+        setInterval("settime()", 1000);
+
+        function settime() {
+            var dateTime = new Date();
+            var hour = dateTime.getHours();
+            var minute = dateTime.getMinutes();
+            var second = dateTime.getSeconds();
+
+            if (minute < 10)
+                minute = "0" + minute;
+
+            if (second < 10)
+                second = "0" + second;
+
+            var time = "" + hour + ":" + minute + ":" + second;
+
+            document.getElementById("clock").value = time;
+        }
+    </script>
+    <div>
+        <div class="subHeader">
+            <div style="width: auto; display: inline;">
+                <asp:Label ID="lblDateHeading" runat="server" Text="Date :"></asp:Label>
+                <asp:Label ID="lblDateTime" runat="server" Text="Label"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblTime" runat="server" Text="Time :"></asp:Label>
+                <input type="text" id="clock" style="background-color: cadetblue; border: none; color: aqua;"
+                    disabled="disabled" readonly="readonly" />
+            </div>
+            <div style="display: inline; float: right; width: auto; padding-right: 18px;">
+                <asp:Label ID="lblWecomeLable" runat="server" Text="Welcome"></asp:Label>
+                <asp:LinkButton ID="lblLogOutLabel" runat="server" ValidationGroup="none" 
+                    onclick="lblLogOutLabel_Click">Log Out</asp:LinkButton>
+                <%--<a href="LoginPage.aspx">
+                    <asp:Label ID="lblLogOutLabel" runat="server" Text="Log Out"></asp:Label></a>--%>
+            </div>
+        </div>
+        <div class="EmpMainDiv">
+            <div style="padding-left: 8%; padding-top: 1%; padding-bottom: 1%; width: 92%;">
+                <asp:Menu ID="Menu1" runat="server" CssClass="Menu" 
+                    >
+                    <Items>
+                        <asp:MenuItem Text="Master" Value="Master">
+                            <asp:MenuItem Text="Employee Master" Value="Employee Master" NavigateUrl="~/EmployeeMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="User Master" Value="User Master" NavigateUrl="~/UserMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Department Master" Value="Department Master" NavigateUrl="~/DepartmentMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TeamMaster.aspx" Text="Team Master" Value="Team Master">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ProjectMaster.aspx" Text="Project Master" Value="Project Master">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TaskMaster.aspx" Text="Task Master" Value="Task Master">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/DesignationMaster.aspx" Text="Designation Master" Value="Designation Master">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/FormMaster.aspx" Text="Form Master" Value="Form Master">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/LanguageMaster.aspx" Text="Language Master" Value="Language Master">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Holiday Master" Value="Holiday Master" NavigateUrl="~/HolidayMaster.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Break Time Master" Value="Break Time Master" NavigateUrl="~/BreakTimeMaster.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Setting" Value="Setting">
+                            <asp:MenuItem Text="Designationwise Form Setting" Value="Designationwise Form Setting"
+                                NavigateUrl="~/DesignationWiseFormSetting.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Department Team Setting" Value="Department Team Setting" NavigateUrl="~/DepartmentTeamSetting.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Project Team Setting" Value="Project Team Setting" NavigateUrl="~/ProjectTeamSetting.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="User Team Setting" Value="User Team Setting" NavigateUrl="~/UserTeamSetting.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="User Project Task Setting" Value="User Project Task Setting"
+                                NavigateUrl="~/UserwiseProjectTaskSetting.aspx"></asp:MenuItem>
+                            <%--<asp:MenuItem Text="Language Selection" Value="Language Selection" 
+                                NavigateUrl="~/LanguageSelection.aspx" Selectable="False">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="User Language Selection Setting" Value="Language Selection Setting"
+                                NavigateUrl="~/LanguageSelectionSetting.aspx" Selectable="False"></asp:MenuItem>--%>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Timesheet Status" Value="Timesheet">
+                            <asp:MenuItem Text="Check In-Out" Value="Check In-Out" NavigateUrl="~/CheckInOut.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Team Check In-Out" Value="Team Check In-Out" NavigateUrl="~/TeamCheckInOut.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Form Timesheet Approve" Value="Form Timesheet Approve" NavigateUrl="~/FormTimesheetApprove.aspx">
+                            </asp:MenuItem>
+                           <%-- <asp:MenuItem Text="Set Check In-Out of User" Value="Set CHeck In-Out of User" NavigateUrl="~/SetChkInOut.aspx">
+                            </asp:MenuItem>--%>
+                            <%--<asp:MenuItem Text="Input Timesheet" Value="Input Timesheet" NavigateUrl="~/InputTimesheet.aspx">
+                            </asp:MenuItem>--%>
+                            <%--<asp:MenuItem Text="Submit Timesheet By Admin" Value="Submit Timesheet By Admin"
+                                NavigateUrl="~/SubmitTimesheetByAdmin.aspx"></asp:MenuItem>--%>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Timesheet Preview" Value="Timesheet Preview">
+                            <asp:MenuItem Text="Daily Timesheet" Value="Daily Timesheet" NavigateUrl="~/TimesheetPreviewDaily.aspx">
+                            </asp:MenuItem>
+                             <asp:MenuItem Text="Monthly Timesheet" Value="Monthly Timesheet" NavigateUrl="~/MonthllySheet.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Productivity" Value="Productivity">
+                        <asp:MenuItem Text="Gantt Chart" Value="Gantt Chart" NavigateUrl="~/GanttChart.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Reports" Value="Reports">
+                            <asp:MenuItem Text="Project Report" Value="Project Report" NavigateUrl="~/projectReports.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Monthly Report" Value="Monthly Report" NavigateUrl="~/MonthlyReport.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Pie Chart Report" Value="Pie Chart Report" NavigateUrl="~/DemoReport.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Track" Value="Track">
+                            <asp:MenuItem Text="User" Value="User" NavigateUrl="~/TrackUser.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Users Route" Value="Users Route" NavigateUrl="~/TrackUserRoute.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Show Past outdoor Users Route" Value="Show Past outdoor Users Route"
+                                NavigateUrl="~/ShowPastUserOnRoute.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
